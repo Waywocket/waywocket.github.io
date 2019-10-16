@@ -2,3 +2,58 @@
 ---
 
 @import "{{ site.theme }}";
+
+/* global styles */
+body {
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* for some reason images can be wider than content -- fix that */
+img {
+  max-width: 640px;
+}
+
+/* page header */
+#project_title a {
+  color: #fff;
+}
+
+/* page footer */
+#miscellany {
+  clear: both;
+}
+#miscellany h2, #miscellany p {
+  color: #aaa;
+  font-size: 1em;
+  margin: 0;
+}
+#miscellany h2 {
+  background: none;
+  border-top: 1px dotted #999;
+  padding-top: 8px;
+}
+
+
+/* topic sections */
+.topic-intro {
+  background-color: #dfdfdf;
+  border-left: 0.25em solid #999;
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+  padding: 0.5em 0.5em 0.5em 0.75em;
+}
+.section-intro {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* footer styles */
+footer .copyright {
+  float: left;
+}
+footer .license {
+  float: right;
+}

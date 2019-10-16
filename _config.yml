@@ -1,4 +1,10 @@
+url: "http://docs.thrashplay.com"
+baseurl: "infrastruction"
+
 theme: jekyll-theme-slate
 
-title: Infrastruction - Thrashplay
-description: Code and documentation describing the Thrashplay infrastructure tools.
+title: Infrastruction
+description: Some code, some rambling. All software.
+google_analytics: UA-135667639-2
+
+markdown: kramdown
