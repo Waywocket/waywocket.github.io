@@ -1,10 +1,9 @@
-url: "http://docs.thrashplay.com"
-baseurl: "infrastruction"
+url: "http://typeharder.com"
 
 theme: jekyll-theme-slate
 
-title: Infrastruction
+title: Type Harder!
 description: Some code, some rambling. All software.
-google_analytics: UA-135667639-2
+google_analytics: UA-135667639-3
 
 markdown: kramdown
