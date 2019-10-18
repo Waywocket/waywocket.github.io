@@ -10,92 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*****************/
-/* Nav - General */
-/*****************/
-
-/* nav links */
-nav a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-}
-
-/* Active/current link */
-nav a.active {
-  background-color: #ccc;
-  color: #000;
-}
-
-/* Links on mouse-over */
-nav a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
-/* On screens that are less than 1120px wide, make the sidebar into a topbar */
-@media screen and (min-width: 1120px) {
-  #main_content_wrap nav {
-    display: block;
-  }  
-  #nav-wrap {
-    display: none;
-  }
-}
-@media screen and (max-width: 1119px) {
-  #main_content_wrap nav {
-    display: none;
-  }  
-  #nav-wrap {
-    display: block;
-  }
-}
-
-/*****************/
-/* Nav - Sidebar */
-/*****************/
-
-#main_content_wrap nav {
-  border-right: 1px dotted #ccc;
-  height: 100%;
-  left: -240px;
-  overflow: auto;
-  padding: 0;
-  position: absolute;
-  width: 200px;
-}
-
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  #main_content_wrap nav a {
-    text-align: center;
-    float: none;
-    width: 100%;
-  }
-}
-
-/****************/
-/* Nav - Header */
-/****************/
-
-#nav-wrap {
-  background: #666;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-#header_wrap nav {
-  display: flex;
-  margin: 0 auto;
-  max-width: 640px;
-  padding: 2px 0;
-}
-#header_wrap nav a {
-  padding: 0.3em 1em;
-}
-
 /****************/
 /* Main Content */
 /****************/
@@ -103,10 +17,15 @@ nav a:hover:not(.active) {
 #main_content_wrap {
   border-top: 1px solid rgb(242, 242, 242);
   clear: both;
+  padding-bottom: 15px;
 }
-
-#sidebar-and-content {
-  position: relative;
+#main_content_wrap:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 
 #main_content {
@@ -128,6 +47,7 @@ img {
 #miscellany {
   clear: both;
 }
+
 #miscellany h2, #miscellany p {
   color: #aaa;
   font-size: 1em;

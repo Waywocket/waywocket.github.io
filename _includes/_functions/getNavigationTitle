@@ -1,0 +1,11 @@
+{%- comment -%}
+  description: Gets the navigation title to use for a navigation item.
+  parameters: 
+    navigationItem: the navigation item to check
+  returns: The configured title from `navigation.yml`, or else the title for the matching page.
+{%- endcomment -%}
+{%- if include.navigationItem.title %}{{ include.navigationItem.title }}{%- else -%}
+{%- assign matching_pages = site.pages | where: "url",include.navigationItem.url -%}
+{%- assign matching_page_count = matching_pages | size -%}
+{%- if matching_page_count > 0 -%}{{ matching_pages[0].title }}{%- else -%}{{ item.url }}{%- endif -%}
+{%- endif -%}

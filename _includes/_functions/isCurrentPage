@@ -1,0 +1,10 @@
+{%- assign description = 'Determines if the currently loaded page is represented by a specific navigation item.' -%}
+{%- assign parameters = 'navigationItem: description: Navigation item to check' -%}
+{%- assign returns = "The string 'true' if the current page is the navigation item, otherwise 'false'" -%}
+{%- capture generated_url %}{{ include.navigationItem.title | slugify: 'latin'}}{% endcapture -%}
+{%- capture item_url %}{% if include.navigationItem.url %}{{ include.navigationItem.url | relative_url }}{% else %}{{ generated_url | relative_url }}{% endif %}{% endcapture -%}
+{%- assign url_size = item_url | size -%}
+{%- assign start_index = url_size | minus: 1 -%}
+{%- assign last_character_in_url = item_url | slice: start_index, 1 -%}
+{%- capture url_for_comparison %}{% if last_character_in_url == '/' %}{{ item_url }}{% else %}{{ item_url | append: '.html' }}{% endif %}{% endcapture -%}
+{%- if url_for_comparison == page.url %}true{% else %}false{% endif -%}

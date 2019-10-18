@@ -1,0 +1,8 @@
+{%- comment -%}
+  description: Determines if the current page's URL is in a given navigation section
+  parameters: 
+    section: Navigation section to check
+  returns: 'true' if the current page is in the section, 'false' otherwise
+{%- endcomment -%}
+{%- capture is_in_any_page %}{% include _functions/isCurrentPageInSection_helper section=include.section %}{%- endcapture -%}
+{%- if '' == is_in_any_page | strip %}{{is_in_any_page}}{% else %}true{% endif -%}

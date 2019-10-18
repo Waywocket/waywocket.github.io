@@ -1,6 +1,6 @@
-{% capture header %}
-  <h1 id="project_title"><a href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-{% endcapture %}
-{% capture extraCss %}{{ '/assets/css/content_style.css?v=' | append: site.github.build_revision | relative_url }}{% endcapture %}
-
-{% include layout/base.html content=content  extraCss=extraCss header=header  %}
+---
+layout: base
+extraCss:
+  - /assets/css/interior_page.css
+---
+{{ content }}

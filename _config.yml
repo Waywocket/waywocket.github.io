@@ -2,6 +2,8 @@ url: "http://typeharder.com"
 
 theme: jekyll-theme-slate
 
+permalink: /:categories/:year/:month/:day/:title/
+
 title: Type Harder!
 description: Some code, some rambling. All software.
 google_analytics: UA-135667639-3

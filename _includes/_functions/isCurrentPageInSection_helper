@@ -1,0 +1,7 @@
+{%- comment -%}
+  See: _functions/isCurrentPageInSection
+{%- endcomment -%}
+{%- if include.section.url == page.url %}true{% else %}
+{%- for current_page in include.section.items -%}
+  {%- if current_page.url == page.url %}true{% endif -%}
+{%- endfor -%}{% endif %}

@@ -1,0 +1,105 @@
+<nav id="header-nav" class="top accordion">
+    {% for section in site.data.navigation.items %}
+      {% capture is_current_page_in_section %}{% include _functions/isCurrentPageInSection section=section %}{% endcapture %}
+      {% capture sectionTitle %}{% include _functions/getNavigationTitle navigationItem=section %}{% endcapture %}
+
+      {% assign current_section_page_count = section.items | size %}
+      {% if current_section_page_count <= 1 %}
+        <a 
+          class="{% if is_current_page_in_section == 'true' %}active{% endif %}" 
+          href="{{ section.url }}"
+          >
+            {{ sectionTitle }}
+        </a>
+      {% else %}
+        {% comment %}
+          dropdown rendering is used for horizontal top nav
+        {% endcomment %}
+        <div class="dropdown">
+          <a 
+            id="dropdown-link-{{ sectionTitle | slugify: 'latin' }}"
+            class="section-expander dropdown-toggle {% if is_current_page_in_section == 'true' %}active{% endif %} {% if is_current_page_in_section != 'true' %}collapsed{% endif %}" 
+            role="button"
+            data-toggle="dropdown" 
+            aria-expanded="false" 
+            aria-haspopup="true"
+            href="javascript:void(0);"
+            >
+            {{ sectionTitle }}
+          </a>
+
+          <div 
+            id="section-nav-{{ sectionTitle | slugify: 'latin' }}" 
+            class="dropdown-menu"
+            aria-labelledby="dropdown-link-{{ sectionTitle | slugify: 'latin' }}"
+            >
+
+            <nav 
+              class="section {% if is_current_page_in_section == 'true' %}show{% endif %}"
+              >
+              {% capture is_current_page %}{% include _functions/isCurrentPage navigationItem=section %}{% endcapture %}
+              <a 
+                class="{% if is_current_page == 'true' %}active{% endif %}" 
+                href="{{ section.url | relative_url }}"
+                >
+                  Overview
+              </a>
+
+              {% for item in section.items %}
+                {% capture is_current_page %}{% include _functions/isCurrentPage navigationItem=item %}{% endcapture %}
+                <a 
+                  class="{% if is_current_page == 'true' %}active{% endif %}" 
+                  href="{{ item.url | relative_url }}"
+                  >
+                    {% include _functions/getNavigationTitle navigationItem=item %}
+                </a>
+              {% endfor %}
+            </nav>
+          </div>
+        </div>
+
+        {% comment %}
+          accordion rendering is used for vertical top nav
+        {% endcomment %}
+        <div class="accordion-item">
+          <a 
+            id="collapse-button-{{ sectionTitle | slugify: 'latin' }}"
+            class="section-expander {% if is_current_page_in_section == 'true' %}active{% endif %} {% if is_current_page_in_section != 'true' %}collapsed{% endif %}" 
+            role="button"
+            data-toggle="collapse" 
+            data-target="#section-nav-{{ sectionTitle | slugify: 'latin' }}" 
+            aria-expanded="false" 
+            aria-controls="section-nav-{{ sectionTitle | slugify: 'latin' }}"
+            href="javascript:void(0);"
+            >
+            {{ sectionTitle }}
+          </a>
+      
+          <nav 
+            id="section-nav-{{ sectionTitle | slugify: 'latin' }}" 
+            class="section flex-nowrap collapse {% if is_current_page_in_section == 'true' %}show{% endif %}"
+            data-parent="#header-nav"
+            aria-labelledby="collapse-button-{{ sectionTitle | slugify: 'latin' }}"
+            >
+            {% capture is_current_page %}{% include _functions/isCurrentPage navigationItem=section %}{% endcapture %}
+            <a 
+              class="{% if is_current_page == 'true' %}active{% endif %}" 
+              href="{{ section.url | relative_url }}"
+              >
+                Overview
+            </a>
+
+            {% for item in section.items %}
+              {% capture is_current_page %}{% include _functions/isCurrentPage navigationItem=item %}{% endcapture %}
+              <a 
+                class="{% if is_current_page == 'true' %}active{% endif %}" 
+                href="{{ item.url | relative_url }}"
+                >
+                  {% include _functions/getNavigationTitle navigationItem=item %}
+              </a>
+            {% endfor %}
+          </nav>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </nav>

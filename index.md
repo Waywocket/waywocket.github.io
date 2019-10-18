@@ -1,14 +1,7 @@
 ---
 layout: home_page
-miscellany:
-  - name: Thrashplay Glossary
-    url: ./glossary
-  - name: Content License
-    url: ./licensing
 ---
-# Introduction
-
-## What is This?
+## What is this?
 This is a repository of knowledge -- captured in code and commentary -- on how
 to develop software. Is this the *best* way to develop software? Maybe. Maybe not.
 But it is *a* way, and sometimes that's what you need when your great idea meets

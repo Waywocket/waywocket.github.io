@@ -1,0 +1,43 @@
+items:
+- title: Home
+  url: /
+- url: /blog/
+- url: /development/
+  items:
+    - url: /development/react/
+      items:
+        - url: /development/react/its-just-functions/
+        - url: /development/react/async-actions-rethought/
+- url: /devops-and-tooling/
+  items:
+    - url: /devops-and-tooling/continuous-integration/
+      items:
+      - title: Using Drone
+        url: /devops-and-tooling/continuous-integration/drone/
+      - title: CI Philosophy
+        url: /devops-and-tooling/continuous-integration/philosophy/
+    - url: /devops-and-tooling/gitops/
+      items:
+      - url: /devops-and-tooling/gitops/flux/
+      - url: /devops-and-tooling/gitops/sealed-secrets/
+      - url: /devops-and-tooling/gitops/lets-encrypt/
+    - url: /devops-and-tooling/providers/
+      items:
+        - url: /devops-and-tooling/providers/google-cloud-platform/
+        - url: /devops-and-tooling/providers/namecheap/
+- url: /projects/
+  items:
+    - url: /projects/development-tools/
+      items:
+        - url: /projects/development-tools/toolbox/
+        - url: /projects/development-tools/modular-cli/
+    - url: /projects/devops-tools/
+      items:
+        - url: /projects/devops-tools/drone-jsonnet/
+        - url: /projects/devops-tools/kubectl-wrapper/
+    - url: /projects/bootstrap-tools/
+      items:
+        - url: /projects/bootstrap-tools/cluster-forge/
+        - url: /projects/bootstrap-tools/bootstrap-library/
+        - url: /projects/bootstrap-tools/presets/
+- url: /sean-kleinjung/
