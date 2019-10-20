@@ -6,7 +6,7 @@ items:
       items:
         - url: /development/react/its-just-functions/
         - url: /development/react/async-actions-rethought/
-- title: DevOps
+- title: Operations
   url: /devops-and-tooling/
   items:
     - url: /devops-and-tooling/continuous-integration/

@@ -39,7 +39,26 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
 }
 h2 {
+  // background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.9) 100%),url('{{ "/assets/images/css/ic_apps_black_36dp.png" | relative_url }}') no-repeat local 0px 4px;
+  // background: no-repeat local 0px 4px;
   margin-bottom: 1.2rem;
+}
+/* add bullet icon */
+#main_content h2:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: -48px;
+  width: 36px;
+  height: 36px;
+  z-index: 1;
+  opacity: 0.1;
+  background: transparent url('{{ "/assets/images/css/ic_apps_black_36dp.png" | relative_url }}') no-repeat local 0 4px;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 h3 {
   font-size: 2.9rem;
@@ -52,6 +71,12 @@ p {
 /**********/
 /* Header */
 /**********/
+#avatar {
+  float: left; 
+  left: -110px;
+  overflow: visible; 
+  position: absolute; 
+}
 #project_title {
   margin-bottom: 1.8rem;
 }

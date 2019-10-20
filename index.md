@@ -17,7 +17,7 @@ moment. Or whatever else is on my mind. *Warning:* Professionalism not guarantee
 This is the part of the site where I talk about actual software development.
 Languages, frameworks, patterns. All this and more fits in this category.
 
-### [DevOps (and tooling)](./devops-and-tooling/)
+### [Operations](./devops-and-tooling/)
 No matter how cool a piece of software might be, it's no good to anybody without
 a cozy place to live. This part of the site is dedicated to things like 
 Kubernetes, Continuous Integration, TLS, and other fun operational-y stuff.
