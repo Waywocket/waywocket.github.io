@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-md navbar-dark d-flex mx-auto py-0">
+  {% if include.show_brand %}
+    {% assign center_navigation = false %}
+  {% else %}
+    {% assign center_navigation = true %}
+  {% endif %}
+
+  {% if include.show_brand %}
+    <a class="navbar-brand ml-0 mr-3 my-1 px-3 py-1" href="{{ '/' | relative_url }}">Type Harder!</a>
+  {% endif %}
+
+  <button 
+  class="navbar-toggler my-2" 
+  type="button" 
+  data-toggle="collapse" 
+  data-target="#navbarContent" 
+  aria-controls="navbarContent" 
+  aria-expanded="false" 
+  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarContent" class="collapse navbar-collapse ml-auto {% if center_navigation %}mr-auto{% endif %} flex-grow-0">
+    <div class="navbar-nav">
+      {% for section in site.data.navigation.items %}
+        {% capture is_current_page_in_section %}{% include _functions/isCurrentPageInSection section=section %}{% endcapture %}
+        {% capture sectionTitle %}{% include _functions/getNavigationTitle navigationItem=section %}{% endcapture %}
+
+        {% assign current_section_page_count = section.items | size %}
+        {% if current_section_page_count <= 1 %}
+          <a 
+            class="nav-item nav-link mx-0 my-1 px-3 py-2 {% if is_current_page_in_section == 'true' %}active{% endif %}" 
+            href="{{ section.url }}"
+            >
+              {{ sectionTitle }}
+          </a>
+        {% else %}
+          <div class="nav-item dropdown">
+            <a 
+              id="nav-dropdown-link-{{ sectionTitle | slugify: 'latin' }}" 
+              class="nav-link dropdown-toggle mx-0 my-1 px-3 py-2 {% if is_current_page_in_section == 'true' %}active{% endif %}" 
+              data-toggle="dropdown" 
+              aria-haspopup="true" 
+              aria-expanded="false"
+              href="javascript:void(0);" 
+              >
+              {{ sectionTitle }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="nav-dropdown-link-{{ sectionTitle | slugify: 'latin' }}">
+              {% capture is_current_page %}{% include _functions/isCurrentPage navigationItem=section %}{% endcapture %}
+              <a 
+                class="dropdown-item py-2 {% if is_current_page == 'true' %}active{% endif %}" 
+                href="{{ section.url | relative_url }}"
+                >
+                Overview
+              </a>
+              {% for item in section.items %}
+                {% capture is_current_page %}{% include _functions/isCurrentPage navigationItem=item %}{% endcapture %}
+                <a 
+                  class="dropdown-item py-2 {% if is_current_page == 'true' %}active{% endif %}" 
+                  href="{{ item.url | relative_url }}"
+                  >
+                    {% include _functions/getNavigationTitle navigationItem=item %}
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</nav>

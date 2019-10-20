@@ -1,6 +1,4 @@
 items:
-- title: Home
-  url: /
 - url: /blog/
 - url: /development/
   items:
@@ -8,7 +6,8 @@ items:
       items:
         - url: /development/react/its-just-functions/
         - url: /development/react/async-actions-rethought/
-- url: /devops-and-tooling/
+- title: DevOps
+  url: /devops-and-tooling/
   items:
     - url: /devops-and-tooling/continuous-integration/
       items:

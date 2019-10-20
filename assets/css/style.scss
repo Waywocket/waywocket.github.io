@@ -3,11 +3,58 @@
 
 @import "{{ site.theme }}";
 
+/*
+Best Color:
+Eminence
+ 
+About these coordinates    Color coordinates
+Hex triplet	#6C3082
+sRGBB  (r, g, b)	(108, 48, 130)
+CMYKH   (c, m, y, k)	(17, 63, 0, 49)
+HSV       (h, s, v)	(284°, 63%, 51[39]%)
+Source	Xona.com Color List
+B: Normalized to [0–255] (byte)
+H: Normalized to [0–100] (hundred)
+
+#6C3082;
+*/
+
 /* global styles */
-body {
+html {
   font-size: 20px;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+}
+
+/**************/
+/* Navigation */
+/**************/
+
+#nav-wrap {
+  background-color: #212121;
+  border-bottom: 1px solid #333;
+  color: white;
+  left: 0;
+  padding: 0;
+  width: 100%;
+}
+#nav-wrap .navbar-brand {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ccc;
+  font-weight: bold; 
+}
+#nav-wrap .dropdown-menu {
+  background-color: #212121;
+}
+#nav-wrap .dropdown-item {
+  color: white;
+}
+#nav-wrap .dropdown-item:hover {
+  color: #212121;
 }
 
 /****************/
@@ -50,7 +97,7 @@ img {
 
 #miscellany h2, #miscellany p {
   color: #aaa;
-  font-size: 1em;
+  font-size: 1rem;
   margin: 0;
 }
 #miscellany h2 {
@@ -62,14 +109,14 @@ img {
 /* topic sections */
 .topic-intro {
   background-color: #dfdfdf;
-  border-left: 0.25em solid #999;
+  border-left: 0.25rem solid #999;
   color: #666;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-style: italic;
-  padding: 0.5em 0.5em 0.5em 0.75em;
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
 }
 .section-intro {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-style: italic;
 }
 
