@@ -36,22 +36,26 @@
       </div>
     </div>
 
-    <div id="main_content_wrap" class="outer">
-      <!-- MAIN CONTENT -->
-      <section id="main_content" class="inner">
-        {% if page.image %}
-          <div>
-            <img class="page-image" src="{{ page.image }}" />
-            {% if page.caption %}
-              <p class="page-image-caption">{{ page.caption }}</p>
-            {% endif %}
-          </div>
-        {% endif %}
+    <div id="main-content-wrapper">
+      <div class="container">
+        <!-- MAIN CONTENT -->
+        <div class="row justify-content-center">
+          {% if page.image.src %}
+            <div class="col-lg">
+              <img class="page-image img-fluid mx-auto" src="{{ page.image.src }}" />
+              {% if page.image.caption %}
+                <p class="page-image-caption">{{ page.image.caption }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
 
-        <div id="content-container">
-          {{ content }}
+          <div class="col-lg-auto">
+            <section id="main-content">
+              {{ content }}
+            </section>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
 
     <!-- FOOTER  -->

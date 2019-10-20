@@ -44,7 +44,7 @@ h2 {
   margin-bottom: 1.2rem;
 }
 /* add bullet icon */
-#main_content h2:before {
+#main-content h2:before {
   content: ' ';
   display: block;
   position: absolute;
@@ -66,6 +66,50 @@ h3 {
 
 p {
   margin-bottom: 2rem;
+}
+
+img#avatar {
+  border: 1px solid #ebebeb;
+
+  box-shadow: 0 0 2px #ebebeb;
+  -webkit-box-shadow: 0 0 2px #ebebeb;
+  -moz-box-shadow: 0 0 2px #ebebeb;
+  -o-box-shadow: 0 0 2px #ebebeb;
+  -ms-box-shadow: 0 0 2px #ebebeb;
+}
+img {
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 1px;
+  
+  -webkit-box-shadow: 0 0 5px #ccc;
+  -moz-box-shadow: 0 0 5px #ccc;
+  -o-box-shadow: 0 0 5px #ccc;
+  -ms-box-shadow: 0 0 5px #ccc;
+}
+// img {
+//   margin: 0 auto;
+//   padding: 0.5rem;
+//   margin: 1rem 0 1rem 0;
+//   border: 1px solid #ebebeb;
+
+//   box-shadow: 0 0 5px #ebebeb;
+//   -webkit-box-shadow: 0 0 5px #ebebeb;
+//   -moz-box-shadow: 0 0 5px #ebebeb;
+//   -o-box-shadow: 0 0 5px #ebebeb;
+//   -ms-box-shadow: 0 0 5px #ebebeb;
+// }
+
+p img {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  text-align: center;
+  border: none;
 }
 
 /**********/
@@ -118,32 +162,20 @@ p {
 /* Main Content */
 /****************/
 
-#main_content_wrap {
-  border-top: 1px solid rgb(242, 242, 242);
-  clear: both;
-  padding-bottom: 15px;
-}
-#main_content_wrap:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-
-#main_content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+#main-content-wrapper {
+  background: #f2f2f2;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
   padding: 3.2rem 0 0 0;
+}
+#main-content {
+  max-width: 65rem;
+  position: relative;
 }
 
 .page-image {
-  margin-right: 2.4rem;
+  display: block;
   margin-bottom: 0;
-  max-width: 400px;
 }
 .page-image-caption {
   color: #999;
@@ -157,11 +189,6 @@ p {
   position: relative;
   max-width: 65rem;
   width: 65rem;
-}
-
-/* for some reason images can be wider than content -- fix that */
-img {
-  max-width: 65rem;
 }
 
 /* page header */

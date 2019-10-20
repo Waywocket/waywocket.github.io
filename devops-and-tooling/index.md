@@ -1,6 +1,7 @@
 ---
-image: https://imgs.xkcd.com/comics/automation.png
-caption: 'Source: <a href="https://xkcd.com/1319/">xkcd</a>, used <a href="https://xkcd.com/license.html">with permission</a>'
+image:
+  src: https://imgs.xkcd.com/comics/automation.png
+  caption: 'Source: <a href="https://xkcd.com/1319/">xkcd</a>, used <a href="https://xkcd.com/license.html">with permission</a>'
 ---
 # Operations and Tooling
 I should warn you that I fall for the trap pictured in this *xkcd* comic a lot.
