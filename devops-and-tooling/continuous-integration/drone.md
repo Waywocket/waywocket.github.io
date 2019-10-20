@@ -1,48 +1,7 @@
 # Continuous Integration Using Drone
-  Setting up a robust continuous integration pipeline is hard. Like, really hard.
-  "Entire teams dedicate their entire full-time careers to this" hard. In this 
-  section I try to make it at least a little easier.
-  {: .topic-intro}
 
-A well-functioning process to automate the build and deployment of software is
-crucial to developing software rapidly. It's like your commuter car -- 
-necessary to do your work, but absolutely taken for granted until it's not
-working right.
 
-I've spent way too many nights and weekends thinking about my ideal CI/CD 
-process, and working to locate and/or customize and/or build the tools to make
-it work. The key words in that sentence are "my ideal CI/CD" process. It's 
-very likely I've made some choices you wouldn't have. But hopefully in reading
-these pages, you will get some new ideas on what is possible.
 
-## Final Product
-> See it in action: [Drone Feed for thrashplay-app-creators](https://drone.thrashplay.com/thrashplay/thrashplay-app-creators)
-{: .section-intro}
-
-This section describes how to bootstrap a continuous delivery system to publish
-npm packages to the public npm registry. It uses a workflow I decided on for
-projects in what I call the [*origination* phase](/glossary). At a glance,
-this workflow looks something like the following illustration:
-
-[![Thrashplay's CI Flow](../assets/images/ci/ci-workflow.svg){: width="800px"}](../assets/images/ci/ci-workflow.svg) 
-
-Some things aren't pictured (collisions caused by rapid commits, and promoting
-builds from one release channel to another, for example). These topics will be
-covered in later sections, however.
-
-## Feature Requirements (WIP)
-At the end of the day, a team has to make a lot of decisions about the specific
-behavior of their automation. Thrashplay is no different. For *origination*
-phase projects, our CI requirements are:
-
-- Build + Test + Etc.
-- No Publish Commits
-- Tag things
-- publish stuff?
-- Etc.
-
-If you are interested in the philosophy and fluffy "why's" behind these 
-requirements, you should check out the page on [my CI philosophy](./philosophy)
 
 ## Prerequisites
 In addition to what probably amounts to a lot of technical expertise, I assume

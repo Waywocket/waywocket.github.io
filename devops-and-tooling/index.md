@@ -5,7 +5,8 @@ image:
 ---
 # Operations and Tooling
 I should warn you that I fall for the trap pictured in this *xkcd* comic a lot.
-So you should probably take any advice in this section with a grain of salt.
+So you should probably take that into account when listening to any advice in
+this section.
 {: .page-intro}
 
 I have, over the last couple years, gained a lot of interest in DevOps &mdash; by

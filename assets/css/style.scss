@@ -52,7 +52,7 @@ h2 {
   width: 36px;
   height: 36px;
   z-index: 1;
-  opacity: 0.1;
+  opacity: 0.2;
   background: transparent url('{{ "/assets/images/css/ic_apps_black_36dp.png" | relative_url }}') no-repeat local 0 4px;
   -ms-background-size: cover;
   -o-background-size: cover;
@@ -158,6 +158,31 @@ p img {
   max-width: 90rem;
 }
 
+/* section nav */
+nav.section a {
+  background: url('{{ "/assets/images/css/ic_insert_link_black_18dp.png" | relative_url }}') no-repeat local 0 7px;
+  display: block;
+  padding: 0.25rem 0 0.25rem 30px;
+}
+nav.section p {
+  color: #373737;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.25rem 0 0.25rem 30px;
+  text-decoration: underline;
+}
+nav.section p.wip {
+  color: #666;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.25rem 0 0.25rem 30px;
+  text-decoration: none;
+}
+nav.section p.wip:after {
+  content: '[Coming Soon]';
+  float: right;
+}
+
 /****************/
 /* Main Content */
 /****************/
@@ -166,7 +191,7 @@ p img {
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
-  padding: 3.2rem 0 0 0;
+  padding: 3.2rem 0 3.2rem 0;
 }
 #main-content {
   max-width: 65rem;
@@ -198,19 +223,18 @@ p img {
 
 /* page footer */
 #miscellany {
+  border-top: 1px dotted #999;
   clear: both;
-  padding-top: 0;
+  padding-top: 2rem;
 }
-
-#miscellany h2, #miscellany p {
+#miscellany strong {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+#miscellany p {
   color: #aaa;
   font-size: 1.6rem;
   margin: 0;
-}
-#miscellany h2 {
-  background: none;
-  border-top: 1px dotted #999;
-  padding-top: 8px;
 }
 
 /* topic sections */

@@ -11,10 +11,22 @@ items:
   items:
     - url: /devops-and-tooling/continuous-integration/
       items:
-      - title: Using Drone
+      - title: Continuous Integration Goals
+        url: /devops-and-tooling/continuous-integration/goals/
+      - title: Why Drone?
         url: /devops-and-tooling/continuous-integration/drone/
-      - title: CI Philosophy
-        url: /devops-and-tooling/continuous-integration/philosophy/
+      - title: "Step 1: Deploy Drone"
+        url: /devops-and-tooling/continuous-integration/deploy-drone/
+        draft: true
+      - title: "Step 2: Configure your Project"
+        url: /devops-and-tooling/continuous-integration/project-configuration/
+        draft: true
+      - title: "Step 3: Configure the Pipeline"
+        url: /devops-and-tooling/continuous-integration/pipeline-configuration/
+        draft: true
+      - title: "Wrap-Up"
+        url: /devops-and-tooling/continuous-integration/wrap-up/
+        draft: true
     #- url: /devops-and-tooling/gitops/
     #  items:
     #  - url: /devops-and-tooling/gitops/flux/

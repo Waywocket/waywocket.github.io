@@ -3,5 +3,5 @@
 {%- endcomment -%}
 {%- if include.section.url == page.url %}true{% else %}
 {%- for current_page in include.section.items -%}
-  {%- if current_page.url == page.url %}true{% endif -%}
+  {%- if current_page.url == page.url %}true{% else -%}{% include _functions/isCurrentPageInSection_recursive section=current_page %}{% endif -%}
 {%- endfor -%}{% endif %}

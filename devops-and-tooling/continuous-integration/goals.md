@@ -1,6 +1,20 @@
-# Philosophical Goals for Thrashplay's CI
+# My Goals for a CI Workflow
 
-[< Back to the Continuous Integration Homepage](..)
+## Feature Requirements (WIP)
+At the end of the day, a team has to make a lot of decisions about the specific
+behavior of their automation. Thrashplay is no different. For *origination*
+phase projects, our CI requirements are:
+
+- Build + Test + Etc.
+- No Publish Commits
+- Tag things
+- publish stuff?
+- Etc.
+
+## Philosophy
+
+If you are interested in the philosophy and fluffy "why's" behind these 
+requirements, you should check out the page on [my CI philosophy](./philosophy)
 
 The feature requirements for my CI workflow arose out of some philosophical 
 goals I had in mind when creating it. These are fluffier than the technical 
@@ -12,7 +26,7 @@ The "soft" goals of our CI system are that it:
 - Uses git politely
 - Enforces good habits
 
-#### Provides basic CI functionality
+### Provides basic CI functionality
 > Sneak peek: [Drone Configuration Reference](https://docker-runner.docs.drone.io/configuration/)
 > and [Plugin Registry](http://plugins.drone.io/)
 {: .section-intro}
@@ -33,7 +47,7 @@ The hard part here is going to be creating all the specific build tasks for your
 project: What are the lint rules? How is your source code structured? *Writing unit
 tests...*
 
-#### Uses git politely
+### Uses git politely
 The CI system should annotate the git history such that builds can be repeated 
 and versioned artifacts can be reproduced on-demand. It should do this without creating
 noise or hampering developers. Specifically:
@@ -47,7 +61,7 @@ noise or hampering developers. Specifically:
 - Commit history should not be polluted
    - Many CI systems create 'publish' commits for each build. I hate these.
 
-#### Enforces good habits
+### Enforces good habits
 Developers shouldn't have to perform any work to do the right thing. *Zero*. 
 Seriously, those guys are lazy. Every commit and every build should adhere to
 every requirement of the system, every time. Enforcing lint rules and commit

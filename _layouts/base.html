@@ -52,6 +52,7 @@
           <div class="col-lg-auto">
             <section id="main-content">
               {{ content }}
+              {% include layout/navigation_trailer.html %}
             </section>
           </div>
         </div>
@@ -62,7 +63,7 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright">
-          {{ site.title | default: site.github.repository_name }} maintained by 
+          {{ site.title | default: site.github.repository_name }} is maintained by 
           <a href="https://github.com/skleinjung">Sean Kleinjung</a>
         </p>
 
@@ -72,10 +73,10 @@
       </footer>
 
       <footer id="miscellany" class="inner">
-        <h2>Miscellany</h2>
         <p>
-            <a href="{{ '/glossary' | relative_url }}">Glossary</a> |
-            <a href="{{ '/licensing' | relative_url }}">Content License</a>
+          <strong>Miscellany: </strong>
+          <a href="{{ '/glossary' | relative_url }}">Glossary</a> |
+          <a href="{{ '/licensing' | relative_url }}">Content License</a>
         </p>
       </footer>
     </div>

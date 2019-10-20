@@ -1,0 +1,33 @@
+{% for section in site.data.navigation.items %}
+  {% capture is_current_page_in_section %}{% include _functions/isCurrentPageInSection section=section %}{% endcapture %}
+
+  {% if is_current_page_in_section == 'true' %}
+    {% for item in section.items %}
+      {% capture is_current_page_in_section %}{% include _functions/isCurrentPageInSection section=item %}{% endcapture %}
+      {% if is_current_page_in_section == 'true' %}
+        {% assign current_section_page_count = item.items | size %}
+        {% if current_section_page_count > 0 %}
+          <nav class="section">
+            <h2>In this Section</h2>
+            {% capture is_current_page %}{% include _functions/isCurrentPage navigationItem=item %}{% endcapture %}
+            {% if is_current_page == 'true' %}
+              <p>Overview</p>
+            {% else %}
+              <a href="{{ item.url | relative_url }}">Overview</a>
+            {% endif %}
+
+            {% for subitem in item.items %}
+              {% capture is_current_page %}{% include _functions/isCurrentPage navigationItem=subitem %}{% endcapture %}
+              {% capture pageTitle %}{% include _functions/getNavigationTitle navigationItem=subitem %}{% endcapture %}
+              {% if is_current_page == 'true' or subitem.draft %}
+                <p {% if subitem.draft %}class="wip"{% endif %}>{{ pageTitle }}</p>
+              {% else %}
+                <a href="{{ subitem.url | relative_url }}">{{ pageTitle }}</a>
+              {% endif %}
+            {% endfor %}
+          </nav>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}

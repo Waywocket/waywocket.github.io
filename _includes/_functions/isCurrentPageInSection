@@ -4,5 +4,5 @@
     section: Navigation section to check
   returns: 'true' if the current page is in the section, 'false' otherwise
 {%- endcomment -%}
-{%- capture is_in_any_page %}{% include _functions/isCurrentPageInSection_helper section=include.section %}{%- endcapture -%}
+{%- capture is_in_any_page %}{% include _functions/isCurrentPageInSection_recursive section=include.section %}{%- endcapture -%}
 {%- if '' == is_in_any_page | strip %}{{is_in_any_page}}{% else %}true{% endif -%}
