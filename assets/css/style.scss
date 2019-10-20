@@ -1,7 +1,12 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans&display=swap');
+@import "variables";
+
+@import "bootstrap/bootstrap";
+
+@import "jekyll-styles";
 
 /*
 Best Color:
@@ -21,13 +26,37 @@ H: Normalized to [0–100] (hundred)
 
 /* global styles */
 html {
-  font-size: 20px;
+  font-size: 0.625rem;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', 'serif';
+  letter-spacing: 1px;
+}
+h2 {
+  margin-bottom: 1.2rem;
+}
+h3 {
+  font-size: 2.9rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+/**********/
+/* Header */
+/**********/
+#project_title {
+  margin-bottom: 1.8rem;
+}
+#project_tagline {
+  color: #ccc;
 }
 
 /**************/
@@ -76,13 +105,14 @@ body {
 }
 
 #main_content {
-  padding: 0;
+  padding: 3.2rem 0 0 0;
+  max-width: 65rem;
 }
 
 
 /* for some reason images can be wider than content -- fix that */
 img {
-  max-width: 640px;
+  max-width: 65rem;
 }
 
 /* page header */
@@ -93,11 +123,12 @@ img {
 /* page footer */
 #miscellany {
   clear: both;
+  padding-top: 0;
 }
 
 #miscellany h2, #miscellany p {
   color: #aaa;
-  font-size: 1rem;
+  font-size: 1.6rem;
   margin: 0;
 }
 #miscellany h2 {
