@@ -1,6 +1,6 @@
 # Philosophical Goals for Thrashplay's CI
 
-[< Back to the Continuous Integration Homepage](./index)
+[< Back to the Continuous Integration Homepage](..)
 
 The feature requirements for my CI workflow arose out of some philosophical 
 goals I had in mind when creating it. These are fluffier than the technical 

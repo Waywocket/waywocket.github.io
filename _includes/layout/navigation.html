@@ -27,7 +27,7 @@
         {% capture sectionTitle %}{% include _functions/getNavigationTitle navigationItem=section %}{% endcapture %}
 
         {% assign current_section_page_count = section.items | size %}
-        {% if current_section_page_count <= 1 %}
+        {% if current_section_page_count < 1 %}
           <a 
             class="nav-item nav-link mx-0 my-1 px-3 py-2 {% if is_current_page_in_section == 'true' %}active{% endif %}" 
             href="{{ section.url }}"

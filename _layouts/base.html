@@ -21,7 +21,6 @@
       {% if layout.show_header %}
         {% assign show_brand = false %}
 
-
         <header class="inner">
           <img id="avatar" src="{{ '/assets/images/sean_avatar_80.png' | relative_url }}" />
 
@@ -40,6 +39,15 @@
     <div id="main_content_wrap" class="outer">
       <!-- MAIN CONTENT -->
       <section id="main_content" class="inner">
+        {% if page.image %}
+          <div>
+            <img class="page-image" src="{{ page.image }}" />
+            {% if page.caption %}
+              <p class="page-image-caption">{{ page.caption }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+
         <div id="content-container">
           {{ content }}
         </div>

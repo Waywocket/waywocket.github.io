@@ -15,15 +15,15 @@ items:
         url: /devops-and-tooling/continuous-integration/drone/
       - title: CI Philosophy
         url: /devops-and-tooling/continuous-integration/philosophy/
-    - url: /devops-and-tooling/gitops/
-      items:
-      - url: /devops-and-tooling/gitops/flux/
-      - url: /devops-and-tooling/gitops/sealed-secrets/
-      - url: /devops-and-tooling/gitops/lets-encrypt/
-    - url: /devops-and-tooling/providers/
-      items:
-        - url: /devops-and-tooling/providers/google-cloud-platform/
-        - url: /devops-and-tooling/providers/namecheap/
+    #- url: /devops-and-tooling/gitops/
+    #  items:
+    #  - url: /devops-and-tooling/gitops/flux/
+    #  - url: /devops-and-tooling/gitops/sealed-secrets/
+    #  - url: /devops-and-tooling/gitops/lets-encrypt/
+    #- url: /devops-and-tooling/providers/
+    #  items:
+    #    - url: /devops-and-tooling/providers/google-cloud-platform/
+    #    - url: /devops-and-tooling/providers/namecheap/
 - url: /projects/
   items:
     - url: /projects/development-tools/
