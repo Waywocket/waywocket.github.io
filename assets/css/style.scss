@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Material+Icons&display=swap');
 @import "variables";
 
 @import "bootstrap/bootstrap";
@@ -34,11 +34,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Merriweather', 'serif';
   letter-spacing: 1px;
 }
-h2 {
+h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 3rem;
+}
+h2, .h2 {
   // background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.9) 100%),url('{{ "/assets/images/css/ic_apps_black_36dp.png" | relative_url }}') no-repeat local 0px 4px;
   // background: no-repeat local 0px 4px;
   margin-bottom: 1.2rem;
@@ -112,6 +115,15 @@ p img {
   border: none;
 }
 
+.alert {
+  font-size: 1.4rem;
+  margin: 1.4rem 0;
+}
+p.alert {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
 /**********/
 /* Header */
 /**********/
@@ -159,26 +171,43 @@ p img {
 }
 
 /* section nav */
-nav.section a {
-  background: url('{{ "/assets/images/css/ic_insert_link_black_18dp.png" | relative_url }}') no-repeat local 0 7px;
-  display: block;
-  padding: 0.25rem 0 0.25rem 30px;
+nav.section {
+  font-family: 'Merriweather', 'serif';
+  margin-top: 1.8rem;
+  padding: 0;
+  width: 100%;
 }
-nav.section p {
+nav.section .h2 {
+  font-size: 2.6rem;
+  margin-bottom: -0.6rem;
+}
+
+.link-list a {
+  display: block;
+  padding: 0.25rem 0 0.25rem 0;
+}
+.link-list a:before {
+	content: "insert_link";
+  display: inline-block;
+  font-family: "Material Icons";
+  margin-right: 0.8rem;
+  vertical-align: bottom;
+}
+.link-list p {
   color: #373737;
   font-weight: bold;
   margin: 0;
   padding: 0.25rem 0 0.25rem 30px;
   text-decoration: underline;
 }
-nav.section p.wip {
+.link-list p.wip {
   color: #666;
   font-weight: normal;
   margin: 0;
   padding: 0.25rem 0 0.25rem 30px;
   text-decoration: none;
 }
-nav.section p.wip:after {
+.wip:after {
   content: '[Coming Soon]';
   float: right;
 }
@@ -252,6 +281,9 @@ nav.section p.wip:after {
 .lead {
   font-style: italic;
 }
+h2 > .lead, .h2 > .lead {
+  margin-top: -1.8rem;
+}
 
 /* footer styles */
 footer .copyright {
@@ -259,4 +291,37 @@ footer .copyright {
 }
 footer .license {
   float: right;
+}
+
+/**************/
+/* References */
+/**************/
+
+.references {
+  margin-top: 1.8rem;
+  padding: 0;
+  width: 100%;
+}
+.references h2 {
+  background: none;
+  border-bottom: 1px dotted #aaa;
+  border-top: 1px dotted #aaa;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 1rem 0 1rem 1rem;
+  width: 100%;
+}
+
+.references ul {
+  font-family: 'Merriweather', 'serif';
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 1rem 0 0 0;
+}
+.link-list a.external::before {
+  content: 'bookmark';
 }

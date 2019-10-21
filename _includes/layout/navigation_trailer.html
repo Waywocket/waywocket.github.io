@@ -7,8 +7,10 @@
       {% if is_current_page_in_section == 'true' %}
         {% assign current_section_page_count = item.items | size %}
         {% if current_section_page_count > 0 %}
-          <nav class="section">
-            <h2>In this Section</h2>
+          {% capture sectionTitle %}{% include _functions/getNavigationTitle navigationItem=item %}{% endcapture %}
+
+          <nav class="section link-list">
+            <div class="h2">More in "{{ sectionTitle }}"...</div>
             {% capture is_current_page %}{% include _functions/isCurrentPage navigationItem=item %}{% endcapture %}
             {% if is_current_page == 'true' %}
               <p>Overview</p>

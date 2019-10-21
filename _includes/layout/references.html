@@ -1,0 +1,10 @@
+{% if page.references %}
+  <section class="references">
+    <h2 data-toggle="collapse" role="button" data-target="#reference-list" role="button" aria-expanded="true" aria-controls="reference-list">External References</h2>
+    <ul id="reference-list" class="collapse show link-list list-unstyled">
+      {% for reference in page.references %}
+        <li><a href="{{ reference.url }}" class="external" target="_blank">{{ reference.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
