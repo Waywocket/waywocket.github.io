@@ -33,8 +33,7 @@ Part bragging, part advertising. Here is where I talk about all the (hopefully)
 interesting things I've been working on. Most of what is in here will be OSS
 available on GitHub. Maybe you'll find something you can use in your next project?
 
-### About Me
-{: .wip}
+### [About Me](./sean-kleinjung/)
 
 The place to look to find out who I am, and if there's any reason to listen to
 anything else I have to say. I try to keep the personal stuff here.
