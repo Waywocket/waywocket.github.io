@@ -1,9 +1,9 @@
-url: "http://typeharder.com"
+url: "http://librarymeetsworld.com"
 
 permalink: /:categories/:year/:month/:day/:title/
 
-title: Type Harder!
-description: A site by Sean Kleinjung, software tinkerer.
-google_analytics: UA-135667639-3
+title: Library Meets World
+description: A site by JK, badass librarian out to change the world for the better through librarianship.
+
 
 markdown: kramdown
