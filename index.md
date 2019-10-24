@@ -2,7 +2,7 @@
 layout: home_page
 ---
 ## What is this?
-*Library Meets World* is a an irreverant library blog
+*Library Meets World* is a an irreverant library blog dedicated to finding practical applications of new librarianship
 
 ## Sections
 
